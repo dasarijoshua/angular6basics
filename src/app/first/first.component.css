@@ -1,4 +1,18 @@
-h1{
+h1 {
     color: red;
-    
+}
+
+.user_address {
+    border: 1px gray solid;
+    padding: 15px;
+}
+
+p {
+    font-family: "Verdana", sans-serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+h3 {
+    border-left: 10px grey solid;
 }

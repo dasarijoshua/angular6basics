@@ -1,5 +1,20 @@
-<p>
-  first works!
-</p>
+<div class="user_address">
+  <h1>{{ user.Name }}</h1>
+  <h3>{{ user.Title }}</h3>
+  <p>{{ user.Address }}</p>
+  <div *ngIf='user.Phone.length'>
+    Phone:
+    <p *ngFor='let item of user.Phone'>{{item}}</p>
+  </div>
+</div>
 
-<h1>First Compnent I've created</h1>
+<button (click)="showYesterdayClassTrue()">Show Yesterday's</button>
+
+<div *ngIf="showYesterdayClass">
+
+  <h2>Yesterday's class</h2>
+  <p>
+    {{ message }}
+  </p>
+  {{ addsumNum(sumNum,8) }}
+</div>
