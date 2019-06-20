@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from './user.model';
+import { TestService } from '../test.service';
 
 @Component({
   selector: 'app-first',
@@ -12,16 +13,22 @@ export class FirstComponent implements OnInit {
   add: any;
   showYesterdayClass: boolean = false;
 
+  inputText: string;
+  inputText2: string;
   @Input('user') user: User;
 
 
-  constructor() {
+  constructor(public testService: TestService) {
 
     setInterval(() => {
       let currentTime = new Date();
       this.message = currentTime.toDateString() + '' + currentTime.toLocaleTimeString();
     }, 1000)
+
+    testService.printAtConsole();
   }
+
+  // this.testService.printAtConsole();
 
   ngOnInit() {
     // this.add = {
@@ -31,6 +38,11 @@ export class FirstComponent implements OnInit {
     //   'Phone' : [
     //   ] 
     // }
+    this.inputText = "Hello";
+
+    // let testService = new TestService();
+    // this.testService.printAtConsole();
+
 
   }
 
