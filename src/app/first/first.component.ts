@@ -18,14 +18,14 @@ export class FirstComponent implements OnInit {
   @Input('user') user: User;
 
 
-  constructor(public testService: TestService) {
+  constructor(private testService: TestService) {
 
     setInterval(() => {
       let currentTime = new Date();
       this.message = currentTime.toDateString() + '' + currentTime.toLocaleTimeString();
     }, 1000)
 
-    testService.printAtConsole();
+    // let testService = new TestService();
   }
 
   // this.testService.printAtConsole();
@@ -41,13 +41,13 @@ export class FirstComponent implements OnInit {
     this.inputText = "Hello";
 
     // let testService = new TestService();
-    // this.testService.printAtConsole();
+    this.testService.printAtConsole();
 
 
   }
 
   showYesterdayClassTrue() {
-    this.showYesterdayClass = true;
+    this.showYesterdayClass = !this.showYesterdayClass ;
   }
 
   addsumNum(a: number, b: number) {

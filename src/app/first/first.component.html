@@ -8,7 +8,10 @@
   </div>
 </div>
 
-<button (click)="showYesterdayClassTrue()">Show Yesterday's</button>
+<button *ngIf = "showYesterdayClass" (click)="showYesterdayClassTrue()">Show Yesterday's</button>
+
+
+<button *ngIf = "!showYesterdayClass" (click)="showYesterdayClassTrue()">Hide Yesterday's</button>
 
 <div *ngIf="showYesterdayClass">
 
