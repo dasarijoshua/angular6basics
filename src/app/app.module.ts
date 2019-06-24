@@ -10,6 +10,7 @@ import { DatetimeComponent } from './datetime/datetime.component';
 import { ViewModule } from './view/view.module';
 import { TestService } from './test.service';
 
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { TestService } from './test.service';
     DatetimeComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ViewModule
+    BrowserModule, FormsModule, ViewModule, HttpClientModule
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

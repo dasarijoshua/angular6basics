@@ -1,3 +1,17 @@
 <p>
-  view-component works!
+  <button>Click me</button>
 </p>
+
+<div>
+
+  <input type="text" [(ngModel)]="username">
+  <button (click)="getGithubAPI()">Get Github Details!</button>
+    <p>
+      Login: {{response?.login}}
+    </p>
+    <p>
+      Org: {{response.organizations_url}}
+
+    </p>
+
+</div>
