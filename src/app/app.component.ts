@@ -9,6 +9,9 @@ import { User } from './first/user.model';
 export class AppComponent {
   title = 'app';
   user: User;
+  routes = [{ linkName: 'Home', url: 'home' },
+  { linkName: 'View', url: 'view' }, { linkName: 'First', url: 'first' }];
+
 
   constructor() {
     this.user = new User();
